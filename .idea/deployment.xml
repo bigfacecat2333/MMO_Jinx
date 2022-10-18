@@ -5,7 +5,7 @@
       <paths name="tencent">
         <serverdata>
           <mappings>
-            <mapping deploy="/code/MMO_Game_Jinx" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/code/MMO" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
