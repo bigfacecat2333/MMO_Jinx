@@ -26,3 +26,7 @@ message Broadcast{
         int32 ActionData = 5;  // 动作
     }
 }
+
+message Talk{
+    string Content=1;
+}

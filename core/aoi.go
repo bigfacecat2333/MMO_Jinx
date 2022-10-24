@@ -5,6 +5,15 @@ import (
 	"math"
 )
 
+const (
+	AoiMinX int = 85
+	AoiMaxX int = 410
+	AoiCntX int = 10
+	AoiMinY int = 75
+	AoiMaxY int = 400
+	AoiCntY int = 20
+)
+
 /*
 	AOI地图(管理)模块
 */

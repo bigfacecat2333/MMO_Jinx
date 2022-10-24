@@ -12,9 +12,9 @@ import (
 // Player 玩家
 type Player struct {
 	// 玩家ID
-	PID int
+	Pid int32
 
-	// 链接, 用于和客户端通信(不是服务器和客户端的链接!)
+	// 链接, 用于和客户端通信(conn是服务器接收后返回的链接，用于和客户端通信)
 	Conn jinterface.IConnection
 
 	// 当前玩家的X坐标
@@ -42,7 +42,7 @@ func NewPlayer(conn jinterface.IConnection) *Player {
 	IdLock.Unlock()
 	p := &Player{
 		Conn: conn,
-		PID:  int(id),
+		Pid:  id,
 		X:    float32(160 + rand.Intn(10)), // 随机生成一个坐标
 		Y:    0,
 		Z:    float32(140 + rand.Intn(20)), // 随机生成一个坐标
@@ -81,7 +81,7 @@ func (p *Player) SendMsg(msgID uint32, data proto.Message) {
 func (p *Player) SyncPid() {
 	// 组建MsgID:1的proto数据
 	data := &pb.SyncPid{
-		Pid: int32(p.PID),
+		Pid: int32(p.Pid),
 	}
 	// 发送给客户端
 	p.SendMsg(1, data)
@@ -91,7 +91,7 @@ func (p *Player) SyncPid() {
 func (p *Player) BroadCastStartPosition() {
 	// 组建MsgID:200的proto数据
 	protoMsg := &pb.Broadcast{
-		Pid: int32(p.PID),
+		Pid: int32(p.Pid),
 		Tp:  2,
 		Data: &pb.Broadcast_P{
 			P: &pb.Position{
@@ -105,4 +105,24 @@ func (p *Player) BroadCastStartPosition() {
 
 	// 将消息发送给周围的玩家
 	p.SendMsg(200, protoMsg)
+}
+
+// Talk 向周围的玩家广播自己的聊天内容
+func (p *Player) Talk(content string) {
+	//1. 组建MsgId200 proto数据
+	msg := &pb.Broadcast{
+		Pid: p.Pid,
+		Tp:  1, //TP 1 代表聊天广播
+		Data: &pb.Broadcast_Content{
+			Content: content,
+		},
+	}
+
+	//2. 得到当前世界所有的在线玩家
+	players := WorldMgrObj.GetAllPlayers()
+
+	//3. 向所有的玩家发送MsgId:200消息
+	for _, player := range players {
+		player.SendMsg(200, msg)
+	}
 }
