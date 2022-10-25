@@ -126,3 +126,60 @@ func (p *Player) Talk(content string) {
 		player.SendMsg(200, msg)
 	}
 }
+
+// SyncSurrounding 同步周围玩家的位置信息给当前玩家
+func (p *Player) SyncSurrounding() {
+	// 1. 获取当前玩家周围的玩家
+	pids := WorldMgrObj.AoiMgr.GetPlayerIDsByPos(p.X, p.Z)
+	players := make([]*Player, 0, len(pids))
+	for _, pid := range pids {
+		players = append(players, WorldMgrObj.GetPlayerByPid(int32(pid)))
+	}
+
+	// 2. 将玩家的位置信息发送给周围的玩家（广播），让周围的玩家看到当前玩家
+	// 2.1 组建MsgID:200的Player proto数据
+	protoMsg := &pb.Broadcast{
+		Pid: p.Pid,
+		Tp:  2, //TP 2 代表位置广播
+		Data: &pb.Broadcast_P{
+			P: &pb.Position{
+				X: p.X,
+				Y: p.Y,
+				Z: p.Z,
+				V: p.V,
+			},
+		},
+	}
+	// 2.2 分别将消息发送给周围的玩家
+	for _, player := range players {
+		player.SendMsg(200, protoMsg)
+	}
+
+	// 3. 将周围玩家的位置信息发送给当前玩家，让当前玩家看到周围的玩家
+	// 3.1 组建MsgID:202的Player proto数据
+	// 3.1.1 创建一个Player切片，用于存放周围玩家的位置信息
+	playersProtoMsg := make([]*pb.Player, 0, len(players))
+	// 3.1.2 遍历周围玩家，将位置信息组建成Player proto数据
+	for _, player := range players {
+		// 制作Player proto数据
+		p := &pb.Player{
+			Pid: player.Pid,
+			P: &pb.Position{
+				X: player.X,
+				Y: player.Y,
+				Z: player.Z,
+				V: player.V,
+			},
+		}
+		// 将Player proto数据添加到切片中
+		playersProtoMsg = append(playersProtoMsg, p)
+	}
+
+	// 3.1.2 封装SyncPlayers proto数据
+	syncPlayersProtoMsg := &pb.SyncPlayers{
+		Ps: playersProtoMsg[:],
+	}
+
+	// 3.2 将组件好的数据发给客户端
+	p.SendMsg(202, syncPlayersProtoMsg)
+}

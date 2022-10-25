@@ -31,6 +31,7 @@ func (*WorldChatApi) Handle(request jinterface.IRequest) {
 		request.GetConnection().Stop()
 		return
 	}
+
 	//3. 根据pid得到player对象
 	player := core.WorldMgrObj.GetPlayerByPid(pid.(int32))
 

@@ -18,49 +18,13 @@ Platform assembly: E:\xxy\go\MMO\client\client_Data\Managed\Google.Protobuf.dll 
 Loading E:\xxy\go\MMO\client\client_Data\Managed\Google.Protobuf.dll into Unity Child Domain
 Platform assembly: E:\xxy\go\MMO\client\client_Data\Managed\protobuf-net.dll (this message is harmless)
 Loading E:\xxy\go\MMO\client\client_Data\Managed\protobuf-net.dll into Unity Child Domain
-- Completed reload, in  0.034 seconds
+- Completed reload, in  0.033 seconds
 Platform assembly: E:\xxy\go\MMO\client\client_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: E:\xxy\go\MMO\client\client_Data\Managed\System.dll (this message is harmless)
 desktop: 3840x2160 60Hz; virtual: 3840x2160 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.508800 ms
-Setting up 4 worker threads for Enlighten.
-  Thread -> id: d044 -> priority: 1 
-  Thread -> id: 10664 -> priority: 1 
-  Thread -> id: cc54 -> priority: 1 
-  Thread -> id: 100b0 -> priority: 1 
-Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.397700 ms
-
-Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 368.
-Total: 0.300500 ms (FindLiveObjects: 0.015700 ms CreateObjectMapping: 0.009000 ms MarkObjects: 0.160500 ms  DeleteObjects: 0.114800 ms)
-
-Parent of RectTransform is being set with parent property. Consider using the SetParent method instead, with the worldPositionStays argument set to false. This will retain local orientation and scale rather than world orientation and scale, which can prevent common UI scaling issues.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Connect: 127.0.0.1:8999
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Connect Suc
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-PlayerController singleton already created!
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Player: { "pid": 1 }
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Start Game
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
 Initialize engine version: 5.4.1f1 (649f48bbbf0f)
 GfxDevice: creating device client; threaded=1
 Direct3D:
@@ -88,17 +52,23 @@ desktop: 3840x2160 60Hz; virtual: 3840x2160 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.603300 ms
+UnloadTime: 15.011300 ms
 Setting up 4 worker threads for Enlighten.
-  Thread -> id: e5c8 -> priority: 1 
-  Thread -> id: cb60 -> priority: 1 
-  Thread -> id: d74 -> priority: 1 
-  Thread -> id: 2f34 -> priority: 1 
+  Thread -> id: 8fdc -> priority: 1 
+  Thread -> id: 100c0 -> priority: 1 
+  Thread -> id: e968 -> priority: 1 
+  Thread -> id: 6434 -> priority: 1 
+UnloadTime: 0.532100 ms
+Setting up 4 worker threads for Enlighten.
+  Thread -> id: 5684 -> priority: 1 
+  Thread -> id: a3f8 -> priority: 1 
+  Thread -> id: 10618 -> priority: 1 
+  Thread -> id: c840 -> priority: 1 
 Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.505800 ms
+UnloadTime: 2.653500 ms
 
 Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 368.
-Total: 0.344400 ms (FindLiveObjects: 0.022700 ms CreateObjectMapping: 0.009500 ms MarkObjects: 0.198200 ms  DeleteObjects: 0.113200 ms)
+Total: 9.381900 ms (FindLiveObjects: 0.030800 ms CreateObjectMapping: 0.012700 ms MarkObjects: 9.187201 ms  DeleteObjects: 0.150100 ms)
 
 Parent of RectTransform is being set with parent property. Consider using the SetParent method instead, with the worldPositionStays argument set to false. This will retain local orientation and scale rather than world orientation and scale, which can prevent common UI scaling issues.
  
@@ -116,11 +86,61 @@ PlayerController singleton already created!
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
-Player: { "pid": 2 }
+Player: { "pid": 1 }
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+202 count:　1
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
 Start Game
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.618500 ms
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 368.
+Total: 0.343000 ms (FindLiveObjects: 0.022100 ms CreateObjectMapping: 0.009500 ms MarkObjects: 0.193400 ms  DeleteObjects: 0.117200 ms)
+
+Parent of RectTransform is being set with parent property. Consider using the SetParent method instead, with the worldPositionStays argument set to false. This will retain local orientation and scale rather than world orientation and scale, which can prevent common UI scaling issues.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Connect: 127.0.0.1:8999
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Connect Suc
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+PlayerController singleton already created!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Parent of RectTransform is being set with parent property. Consider using the SetParent method instead, with the worldPositionStays argument set to false. This will retain local orientation and scale rather than world orientation and scale, which can prevent common UI scaling issues.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+born player: 2 pos: { "x": 167, "z": 159 }
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Player: { "pid": 2 }
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+202 count:　2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Start Game
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+
+Parent of RectTransform is being set with parent property. Consider using the SetParent method instead, with the worldPositionStays argument set to false. This will retain local orientation and scale rather than world orientation and scale, which can prevent common UI scaling issues.
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 

@@ -25,6 +25,9 @@ func OoConnectionAdd(conn jinterface.IConnection) {
 	// 将当前玩家的链接绑定到conn属性中
 	conn.SetProperty("pid", player.Pid)
 
+	// 同步周边玩家的信息, 告知当前玩家，当前世界有哪些玩家
+	player.SyncSurrounding()
+
 	fmt.Println("======> player pid = ", player.Pid, " is online <======")
 }
 

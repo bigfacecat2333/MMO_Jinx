@@ -95,3 +95,6 @@ message Player{
 3. 测试聊天功能
 
 ![proto3](/img/聊天.png)
+
+### 上线位置同步
+![proto3](/img/上线位置.png)
