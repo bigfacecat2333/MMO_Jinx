@@ -98,3 +98,9 @@ message Player{
 
 ### 上线位置同步
 ![proto3](/img/上线位置.png)
+
+### 移动位置同步
+![proto3](/img/移动.png)
+
+### 离线同步
+![proto3](/img/下线.png)

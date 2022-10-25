@@ -1970,7 +1970,7 @@ If relativePath is empty it refers to the game object the animation clip is atta
       <summary>
         <para>Removes the keyframe at index and inserts key.</para>
       </summary>
-      <param name="index">The index of the key to move.</param>
+      <param name="index">The index of the key to MoveApi.</param>
       <param name="key">The key (with its new time) to insert.</param>
       <returns>
         <para>The index of the keyframe after moving it.</para>
@@ -2828,7 +2828,7 @@ If relativePath is empty it refers to the game object the animation clip is atta
       <param name="bodyWeight">(0-1) determines how much the body is involved in the LookAt.</param>
       <param name="headWeight">(0-1) determines how much the head is involved in the LookAt.</param>
       <param name="eyesWeight">(0-1) determines how much the eyes are involved in the LookAt.</param>
-      <param name="clampWeight">(0-1) 0.0 means the character is completely unrestrained in motion, 1.0 means he's completely clamped (look at becomes impossible), and 0.5 means he'll be able to move on half of the possible range (180 degrees).</param>
+      <param name="clampWeight">(0-1) 0.0 means the character is completely unrestrained in motion, 1.0 means he's completely clamped (look at becomes impossible), and 0.5 means he'll be able to MoveApi on half of the possible range (180 degrees).</param>
     </member>
     <member name="M:UnityEngine.Animator.SetLookAtWeight(System.Single,System.Single)">
       <summary>
@@ -2838,7 +2838,7 @@ If relativePath is empty it refers to the game object the animation clip is atta
       <param name="bodyWeight">(0-1) determines how much the body is involved in the LookAt.</param>
       <param name="headWeight">(0-1) determines how much the head is involved in the LookAt.</param>
       <param name="eyesWeight">(0-1) determines how much the eyes are involved in the LookAt.</param>
-      <param name="clampWeight">(0-1) 0.0 means the character is completely unrestrained in motion, 1.0 means he's completely clamped (look at becomes impossible), and 0.5 means he'll be able to move on half of the possible range (180 degrees).</param>
+      <param name="clampWeight">(0-1) 0.0 means the character is completely unrestrained in motion, 1.0 means he's completely clamped (look at becomes impossible), and 0.5 means he'll be able to MoveApi on half of the possible range (180 degrees).</param>
     </member>
     <member name="M:UnityEngine.Animator.SetLookAtWeight(System.Single,System.Single,System.Single)">
       <summary>
@@ -2848,7 +2848,7 @@ If relativePath is empty it refers to the game object the animation clip is atta
       <param name="bodyWeight">(0-1) determines how much the body is involved in the LookAt.</param>
       <param name="headWeight">(0-1) determines how much the head is involved in the LookAt.</param>
       <param name="eyesWeight">(0-1) determines how much the eyes are involved in the LookAt.</param>
-      <param name="clampWeight">(0-1) 0.0 means the character is completely unrestrained in motion, 1.0 means he's completely clamped (look at becomes impossible), and 0.5 means he'll be able to move on half of the possible range (180 degrees).</param>
+      <param name="clampWeight">(0-1) 0.0 means the character is completely unrestrained in motion, 1.0 means he's completely clamped (look at becomes impossible), and 0.5 means he'll be able to MoveApi on half of the possible range (180 degrees).</param>
     </member>
     <member name="M:UnityEngine.Animator.SetLookAtWeight(System.Single,System.Single,System.Single,System.Single)">
       <summary>
@@ -2858,7 +2858,7 @@ If relativePath is empty it refers to the game object the animation clip is atta
       <param name="bodyWeight">(0-1) determines how much the body is involved in the LookAt.</param>
       <param name="headWeight">(0-1) determines how much the head is involved in the LookAt.</param>
       <param name="eyesWeight">(0-1) determines how much the eyes are involved in the LookAt.</param>
-      <param name="clampWeight">(0-1) 0.0 means the character is completely unrestrained in motion, 1.0 means he's completely clamped (look at becomes impossible), and 0.5 means he'll be able to move on half of the possible range (180 degrees).</param>
+      <param name="clampWeight">(0-1) 0.0 means the character is completely unrestrained in motion, 1.0 means he's completely clamped (look at becomes impossible), and 0.5 means he'll be able to MoveApi on half of the possible range (180 degrees).</param>
     </member>
     <member name="M:UnityEngine.Animator.SetLookAtWeight(System.Single,System.Single,System.Single,System.Single,System.Single)">
       <summary>
@@ -2868,7 +2868,7 @@ If relativePath is empty it refers to the game object the animation clip is atta
       <param name="bodyWeight">(0-1) determines how much the body is involved in the LookAt.</param>
       <param name="headWeight">(0-1) determines how much the head is involved in the LookAt.</param>
       <param name="eyesWeight">(0-1) determines how much the eyes are involved in the LookAt.</param>
-      <param name="clampWeight">(0-1) 0.0 means the character is completely unrestrained in motion, 1.0 means he's completely clamped (look at becomes impossible), and 0.5 means he'll be able to move on half of the possible range (180 degrees).</param>
+      <param name="clampWeight">(0-1) 0.0 means the character is completely unrestrained in motion, 1.0 means he's completely clamped (look at becomes impossible), and 0.5 means he'll be able to MoveApi on half of the possible range (180 degrees).</param>
     </member>
     <member name="M:UnityEngine.Animator.SetQuaternion(System.String,UnityEngine.Quaternion)">
       <summary>
@@ -7576,7 +7576,7 @@ See Also: CanvasRenderer.SetMaterialCount, CanvasRenderer.SetTexture.</para>
     </member>
     <member name="P:UnityEngine.CharacterController.isGrounded">
       <summary>
-        <para>Was the CharacterController touching the ground during the last move?</para>
+        <para>Was the CharacterController touching the ground during the last MoveApi?</para>
       </summary>
     </member>
     <member name="P:UnityEngine.CharacterController.radius">
@@ -7606,7 +7606,7 @@ See Also: CanvasRenderer.SetMaterialCount, CanvasRenderer.SetTexture.</para>
     </member>
     <member name="M:UnityEngine.CharacterController.Move(UnityEngine.Vector3)">
       <summary>
-        <para>A more complex move function taking absolute movement deltas.</para>
+        <para>A more complex MoveApi function taking absolute movement deltas.</para>
       </summary>
       <param name="motion"></param>
     </member>
@@ -7910,7 +7910,7 @@ See Also: CanvasRenderer.SetMaterialCount, CanvasRenderer.SetTexture.</para>
     </member>
     <member name="T:UnityEngine.ClothSkinningCoefficient">
       <summary>
-        <para>The ClothSkinningCoefficient struct is used to set up how a Cloth component is allowed to move with respect to the SkinnedMeshRenderer it is attached to.</para>
+        <para>The ClothSkinningCoefficient struct is used to set up how a Cloth component is allowed to MoveApi with respect to the SkinnedMeshRenderer it is attached to.</para>
       </summary>
     </member>
     <member name="F:UnityEngine.ClothSkinningCoefficient.collisionSphereDistance">
@@ -9376,7 +9376,7 @@ See Also: CanvasRenderer.SetMaterialCount, CanvasRenderer.SetTexture.</para>
         <para>Set the angular tolerance threshold (in degrees) for projection.
 
 If the joint deviates by more than this angle around its locked angular degrees of freedom, 
-the solver will move the bodies to close the angle.
+the solver will MoveApi the bodies to close the angle.
 
 Setting a very small tolerance may result in simulation jitter or other artifacts.
 
@@ -9388,7 +9388,7 @@ Sometimes it is not possible to project (for example when the joints form a cycl
         <para>Set the linear tolerance threshold for projection.
 
 If the joint separates by more than this distance along its locked degrees of freedom, the solver 
-will move the bodies to close the distance.
+will MoveApi the bodies to close the distance.
 
 Setting a very small tolerance may result in simulation jitter or other artifacts.
 
@@ -9427,7 +9427,7 @@ Sometimes it is not possible to project (for example when the joints form a cycl
     </member>
     <member name="P:UnityEngine.ConfigurableJoint.targetPosition">
       <summary>
-        <para>The desired position that the joint should move into.</para>
+        <para>The desired position that the joint should MoveApi into.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.ConfigurableJoint.targetRotation">
@@ -9437,7 +9437,7 @@ Sometimes it is not possible to project (for example when the joints form a cycl
     </member>
     <member name="P:UnityEngine.ConfigurableJoint.targetVelocity">
       <summary>
-        <para>The desired velocity that the joint should move along.</para>
+        <para>The desired velocity that the joint should MoveApi along.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.ConfigurableJoint.xDrive">
@@ -19165,7 +19165,7 @@ GUILayout.MaxHeight, GUILayout.ExpandWidth, GUILayout.ExpandHeight.</param>
     </member>
     <member name="T:UnityEngine.HingeJoint">
       <summary>
-        <para>The HingeJoint groups together 2 rigid bodies, constraining them to move like connected by a hinge.</para>
+        <para>The HingeJoint groups together 2 rigid bodies, constraining them to MoveApi like connected by a hinge.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.HingeJoint.angle">
@@ -20630,7 +20630,7 @@ Only usable on Android, Windows Phone or Windows Tablets.</para>
     </member>
     <member name="P:UnityEngine.JointSuspension2D.angle">
       <summary>
-        <para>The world angle (in degrees) along which the suspension will move.</para>
+        <para>The world angle (in degrees) along which the suspension will MoveApi.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.JointSuspension2D.dampingRatio">
@@ -20650,12 +20650,12 @@ Only usable on Android, Windows Phone or Windows Tablets.</para>
     </member>
     <member name="P:UnityEngine.JointTranslationLimits2D.max">
       <summary>
-        <para>Maximum distance the Rigidbody2D object can move from the Slider Joint's anchor.</para>
+        <para>Maximum distance the Rigidbody2D object can MoveApi from the Slider Joint's anchor.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.JointTranslationLimits2D.min">
       <summary>
-        <para>Minimum distance the Rigidbody2D object can move from the Slider Joint's anchor.</para>
+        <para>Minimum distance the Rigidbody2D object can MoveApi from the Slider Joint's anchor.</para>
       </summary>
     </member>
     <member name="T:UnityEngine.JsonUtility">
@@ -24468,7 +24468,7 @@ Note that updating a light probe volume every frame may be costly. The cost depe
         <para>Moves a value current towards target.</para>
       </summary>
       <param name="current">The current value.</param>
-      <param name="target">The value to move towards.</param>
+      <param name="target">The value to MoveApi towards.</param>
       <param name="maxDelta">The maximum change that should be applied to the value.</param>
     </member>
     <member name="M:UnityEngine.Mathf.MoveTowardsAngle(System.Single,System.Single,System.Single)">
@@ -25530,7 +25530,7 @@ Note that updating a light probe volume every frame may be costly. The cost depe
     </member>
     <member name="P:UnityEngine.NavMeshAgent.autoTraverseOffMeshLink">
       <summary>
-        <para>Should the agent move across OffMeshLinks automatically?</para>
+        <para>Should the agent MoveApi across OffMeshLinks automatically?</para>
       </summary>
     </member>
     <member name="P:UnityEngine.NavMeshAgent.avoidancePriority">
@@ -29137,7 +29137,7 @@ If a string, the string will be converted to raw bytes via &lt;a href="http:msdn
     </member>
     <member name="T:UnityEngine.ParticleAnimator">
       <summary>
-        <para>(Legacy Particles) Particle animators move your particles over time, you use them to apply wind, drag &amp; color cycling to your particle emitters.</para>
+        <para>(Legacy Particles) Particle animators MoveApi your particles over time, you use them to apply wind, drag &amp; color cycling to your particle emitters.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.ParticleAnimator.autodestruct">
@@ -29302,7 +29302,7 @@ If a string, the string will be converted to raw bytes via &lt;a href="http:msdn
     </member>
     <member name="P:UnityEngine.ParticleEmitter.useWorldSpace">
       <summary>
-        <para>If enabled, the particles don't move when the emitter moves. If false, when you move the emitter, the particles follow it around.</para>
+        <para>If enabled, the particles don't MoveApi when the emitter moves. If false, when you MoveApi the emitter, the particles follow it around.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.ParticleEmitter.worldVelocity">
@@ -29456,7 +29456,7 @@ If a string, the string will be converted to raw bytes via &lt;a href="http:msdn
     </member>
     <member name="P:UnityEngine.ParticleRenderer.velocityScale">
       <summary>
-        <para>How much are the particles strectched depending on "how fast they move".</para>
+        <para>How much are the particles strectched depending on "how fast they MoveApi".</para>
       </summary>
     </member>
     <member name="T:UnityEngine.ParticleRenderMode">
@@ -31168,7 +31168,7 @@ If a string, the string will be converted to raw bytes via &lt;a href="http:msdn
     </member>
     <member name="P:UnityEngine.ParticleSystemRenderer.velocityScale">
       <summary>
-        <para>How much are the particles stretched depending on "how fast they move".</para>
+        <para>How much are the particles stretched depending on "how fast they MoveApi".</para>
       </summary>
     </member>
     <member name="M:UnityEngine.ParticleSystemRenderer.GetMeshes(UnityEngine.Mesh[])">
@@ -38884,8 +38884,8 @@ NOTE: This function is destructive: The source scene will be destroyed once the 
         <para>Move a GameObject from its current scene to a new scene.
 It is required that the GameObject is at the root of its current scene.</para>
       </summary>
-      <param name="go">GameObject to move.</param>
-      <param name="scene">Scene to move into.</param>
+      <param name="go">GameObject to MoveApi.</param>
+      <param name="scene">Scene to MoveApi into.</param>
     </member>
     <member name="M:UnityEngine.SceneManagement.SceneManager.SetActiveScene(UnityEngine.SceneManagement.Scene)">
       <summary>
@@ -41355,7 +41355,7 @@ Returns NULL if there is no associated alpha texture for the source sprite. This
     </member>
     <member name="T:UnityEngine.TargetJoint2D">
       <summary>
-        <para>The joint attempts to move a Rigidbody2D to a specific target position.</para>
+        <para>The joint attempts to MoveApi a Rigidbody2D to a specific target position.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.TargetJoint2D.anchor">
@@ -41385,7 +41385,7 @@ Returns NULL if there is no associated alpha texture for the source sprite. This
     </member>
     <member name="P:UnityEngine.TargetJoint2D.target">
       <summary>
-        <para>The world-space position that the joint will attempt to move the body to.</para>
+        <para>The world-space position that the joint will attempt to MoveApi the body to.</para>
       </summary>
     </member>
     <member name="T:UnityEngine.Terrain">
@@ -43409,7 +43409,7 @@ Returns NULL if there is no associated alpha texture for the source sprite. This
     </member>
     <member name="T:UnityEngine.TrailRenderer">
       <summary>
-        <para>The trail renderer is used to make trails behind objects in the scene as they move about.</para>
+        <para>The trail renderer is used to make trails behind objects in the scene as they MoveApi about.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.TrailRenderer.autodestruct">

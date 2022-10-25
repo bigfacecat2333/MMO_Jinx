@@ -130,11 +130,7 @@ func (p *Player) Talk(content string) {
 // SyncSurrounding 同步周围玩家的位置信息给当前玩家
 func (p *Player) SyncSurrounding() {
 	// 1. 获取当前玩家周围的玩家
-	pids := WorldMgrObj.AoiMgr.GetPlayerIDsByPos(p.X, p.Z)
-	players := make([]*Player, 0, len(pids))
-	for _, pid := range pids {
-		players = append(players, WorldMgrObj.GetPlayerByPid(int32(pid)))
-	}
+	players := p.GetSurroundingPlayers()
 
 	// 2. 将玩家的位置信息发送给周围的玩家（广播），让周围的玩家看到当前玩家
 	// 2.1 组建MsgID:200的Player proto数据
@@ -182,4 +178,45 @@ func (p *Player) SyncSurrounding() {
 
 	// 3.2 将组件好的数据发给客户端
 	p.SendMsg(202, syncPlayersProtoMsg)
+}
+
+// UpdatePos 更新玩家的位置信息
+func (p *Player) UpdatePos(x, y, z, v float32) {
+	// 更新玩家的位置信息
+	p.X = x
+	p.Y = y
+	p.Z = z
+	p.V = v
+
+	// 组建MsgID:200的proto数据 位置广播
+	protoMsg := &pb.Broadcast{
+		Pid: p.Pid,
+		Tp:  4, //TP 4 代表位置更新广播
+		Data: &pb.Broadcast_P{
+			P: &pb.Position{
+				X: p.X,
+				Y: p.Y,
+				Z: p.Z,
+				V: p.V,
+			},
+		},
+	}
+
+	// 获取当前玩家周围的玩家
+	players := p.GetSurroundingPlayers()
+	for _, player := range players {
+		player.SendMsg(200, protoMsg)
+	}
+}
+
+// GetSurroundingPlayers 获取周围的玩家
+func (p *Player) GetSurroundingPlayers() []*Player {
+	// 1. 获取当前玩家周围的玩家
+	pids := WorldMgrObj.AoiMgr.GetPlayerIDsByPos(p.X, p.Z)
+	players := make([]*Player, 0, len(pids))
+	for _, pid := range pids {
+		players = append(players, WorldMgrObj.GetPlayerByPid(int32(pid)))
+	}
+
+	return players
 }

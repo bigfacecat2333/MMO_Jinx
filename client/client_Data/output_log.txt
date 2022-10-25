@@ -18,7 +18,7 @@ Platform assembly: E:\xxy\go\MMO\client\client_Data\Managed\Google.Protobuf.dll 
 Loading E:\xxy\go\MMO\client\client_Data\Managed\Google.Protobuf.dll into Unity Child Domain
 Platform assembly: E:\xxy\go\MMO\client\client_Data\Managed\protobuf-net.dll (this message is harmless)
 Loading E:\xxy\go\MMO\client\client_Data\Managed\protobuf-net.dll into Unity Child Domain
-- Completed reload, in  0.033 seconds
+- Completed reload, in  0.363 seconds
 Platform assembly: E:\xxy\go\MMO\client\client_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: E:\xxy\go\MMO\client\client_Data\Managed\System.dll (this message is harmless)
 desktop: 3840x2160 60Hz; virtual: 3840x2160 at 0,0
@@ -52,23 +52,23 @@ desktop: 3840x2160 60Hz; virtual: 3840x2160 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 15.011300 ms
+UnloadTime: 0.489900 ms
 Setting up 4 worker threads for Enlighten.
-  Thread -> id: 8fdc -> priority: 1 
-  Thread -> id: 100c0 -> priority: 1 
-  Thread -> id: e968 -> priority: 1 
-  Thread -> id: 6434 -> priority: 1 
-UnloadTime: 0.532100 ms
+  Thread -> id: c270 -> priority: 1 
+  Thread -> id: d648 -> priority: 1 
+  Thread -> id: 2ecc -> priority: 1 
+  Thread -> id: 1b08 -> priority: 1 
+UnloadTime: 0.776000 ms
 Setting up 4 worker threads for Enlighten.
-  Thread -> id: 5684 -> priority: 1 
-  Thread -> id: a3f8 -> priority: 1 
-  Thread -> id: 10618 -> priority: 1 
-  Thread -> id: c840 -> priority: 1 
+  Thread -> id: d224 -> priority: 1 
+  Thread -> id: d01c -> priority: 1 
+  Thread -> id: 7bd8 -> priority: 1 
+  Thread -> id: 5500 -> priority: 1 
 Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.653500 ms
+UnloadTime: 2.552600 ms
 
 Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 368.
-Total: 9.381900 ms (FindLiveObjects: 0.030800 ms CreateObjectMapping: 0.012700 ms MarkObjects: 9.187201 ms  DeleteObjects: 0.150100 ms)
+Total: 0.342300 ms (FindLiveObjects: 0.022600 ms CreateObjectMapping: 0.009500 ms MarkObjects: 0.199300 ms  DeleteObjects: 0.110000 ms)
 
 Parent of RectTransform is being set with parent property. Consider using the SetParent method instead, with the worldPositionStays argument set to false. This will retain local orientation and scale rather than world orientation and scale, which can prevent common UI scaling issues.
  
@@ -99,10 +99,10 @@ Start Game
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
 
 Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.618500 ms
+UnloadTime: 2.626600 ms
 
 Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 368.
-Total: 0.343000 ms (FindLiveObjects: 0.022100 ms CreateObjectMapping: 0.009500 ms MarkObjects: 0.193400 ms  DeleteObjects: 0.117200 ms)
+Total: 0.340400 ms (FindLiveObjects: 0.022300 ms CreateObjectMapping: 0.009400 ms MarkObjects: 0.193800 ms  DeleteObjects: 0.114100 ms)
 
 Parent of RectTransform is being set with parent property. Consider using the SetParent method instead, with the worldPositionStays argument set to false. This will retain local orientation and scale rather than world orientation and scale, which can prevent common UI scaling issues.
  
