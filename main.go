@@ -31,6 +31,20 @@ func OoConnectionAdd(conn jinterface.IConnection) {
 	fmt.Println("======> player pid = ", player.Pid, " is online <======")
 }
 
+func OnConnectionLost(conn jinterface.IConnection) {
+	// 从世界管理器中删除当前链接对应的玩家
+	pid, err := conn.GetProperty("pid")
+	if err != nil {
+		fmt.Println("OnConnectionLost GetProperty pid error", err)
+		return
+	}
+
+	player := core.WorldMgrObj.GetPlayerByPid(pid.(int32))
+	player.Offline()
+
+	fmt.Println("======> player pid = ", pid.(int32), " is offline <======")
+}
+
 func main() {
 	// 创建jinx的句柄
 	s := jnet.NewServer()
@@ -38,6 +52,7 @@ func main() {
 
 	// 链接创建和销毁的hook函数
 	s.SetOnConnStart(OoConnectionAdd)
+	s.SetOnConnStop(OnConnectionLost)
 
 	// 注册路由
 	s.AddRouter(2, &apis.WorldChatApi{})

@@ -220,3 +220,21 @@ func (p *Player) GetSurroundingPlayers() []*Player {
 
 	return players
 }
+
+// Offline 玩家下线
+func (p *Player) Offline() {
+	players := p.GetSurroundingPlayers()
+
+	// 组建MsgID:201的proto数据 玩家下线广播
+	protoMsg := &pb.SyncPid{
+		Pid: p.Pid,
+	}
+
+	// 将消息发送给周围的玩家
+	for _, player := range players {
+		player.SendMsg(201, protoMsg)
+	}
+
+	// 将玩家从世界管理器中删除
+	WorldMgrObj.RemovePlayerByPid(p.Pid)
+}
